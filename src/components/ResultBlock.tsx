@@ -6,7 +6,9 @@ const ResultBlock: React.FC = () => {
   const { errors, wpm } = useAppSelector((state) => state.typingSlice);
   const dispatch = useAppDispatch();
 
-  const handleRestart = () => dispatch(restartTyping());
+  const handleRestart = React.useCallback(() => {
+    dispatch(restartTyping());
+  }, [dispatch]);
 
   return (
     <div>
