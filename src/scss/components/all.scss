@@ -1,0 +1,197 @@
+.infoBlock {
+  position: relative;
+  display: inline-block;
+}
+
+.textContentFunc {
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+
+  font-size: 30px;
+  line-height: 40px;
+  font-family: monospace;
+
+  overflow: auto;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (max-width: 535px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.textContentChar {
+  position: relative;
+}
+
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 1000px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 535px) {
+    gap: 0;
+  }
+}
+
+.inputField {
+  width: 950px;
+  height: 280px;
+
+  background: transparent;
+  outline: none;
+  border: none;
+
+  border: 1px solid white;
+
+  font-family: monospace;
+
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  outline: none;
+  border: none;
+  box-shadow: none;
+
+  @media (max-width: 1000px) {
+    width: 500px;
+  }
+
+  @media (max-width: 535px) {
+    width: 300px;
+  }
+}
+
+.buttonBlock {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.formButton,
+.restartButton {
+  width: 200px;
+  height: 50px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 20px;
+  font-family: monospace;
+
+  background: rgb(255, 213, 0);
+  color: white;
+  text-shadow: 2px 1px 2px rgb(70 59 0);
+
+  @media (max-width: 1000px) {
+    width: 125px;
+    font-size: 20px;
+    height: 45px;
+  }
+}
+
+.formButton:hover,
+.restartButton:hover {
+  background: darken($color: rgb(255, 213, 0), $amount: 10%);
+  transition: all 0.3s ease-in-out;
+}
+
+.formButton:disabled {
+  opacity: 50%;
+  pointer-events: none;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+.inputField::selection {
+  background: transparent;
+  color: transparent;
+}
+
+.inputField::placeholder {
+  color: transparent;
+}
+
+.inputField:invalid {
+  border-color: transparent;
+  box-shadow: none;
+}
+.inputField:disabled {
+  opacity: 50%;
+}
+
+.timer {
+  width: 55px;
+
+  font-size: 30px;
+
+  color: rgb(255, 213, 0);
+
+  @media (max-width: 535px) {
+    font-size: 20px;
+  }
+}
+
+.caret {
+  position: absolute;
+  background: rgb(255, 213, 0);
+  width: 2px;
+  height: 1.2em;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  cursor: none;
+}
+
+.resultBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.resultInfo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  p {
+    font-size: 30px;
+
+    @media (max-width: 1000px) {
+      font-size: 25px;
+    }
+  }
+
+  span {
+    color: rgb(255, 213, 0);
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}

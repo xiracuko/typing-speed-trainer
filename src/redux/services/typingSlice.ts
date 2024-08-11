@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { StateProps } from "../../types";
 
 export const initialState: StateProps = {
-  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, autem.",
+  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quam? Culpa autem esse modi aliquam accusantium non odio praesentium debitis cum similique maiores quas architecto eveniet vero dolores ex explicabo, reprehenderit dolorum aut provident! Ipsa temporibus rem unde pariatur earum, consectetur nostrum aut soluta quasi labore facere veritatis debitis tempora?",
   userInput: "",
   startTime: 0,
   errors: 0,
