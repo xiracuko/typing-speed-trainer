@@ -11,10 +11,12 @@ const ResultBlock: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <p>Errors: {errors}</p>
-      <p>Wpm: {wpm}</p>
-      <button onClick={handleRestart}>restart</button>
+    <div className="resultBlock">
+      <div className="resultInfo">
+        <p>Errors: <span>{errors}</span></p>
+        <p>Wpm: <span>{wpm.toFixed(2)}</span></p>
+      </div>
+      <button className="restartButton" onClick={handleRestart}>restart</button>
     </div>
   )
 }
